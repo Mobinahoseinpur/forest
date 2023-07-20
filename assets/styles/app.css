@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Rancho&display=swap');
+
 :root{
     --primary:#094b65;
 }
@@ -5,7 +9,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins',sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 body{
     overflow-x: hidden;
@@ -49,5 +53,69 @@ body{
 #header ul li a.active,
 #header ul li a:hover{
     background-color: var(--primary);
+    color: #fff;
+}
+
+/*------------------------------- start section---------------------------- */
+section{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* baraye ijade halat mahv bara tarkib shodan ba ab */
+section::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to top , var(--primary), transparent);
+    z-index: 10;
+}
+section img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+}
+
+section #text{
+    position: absolute;
+    color: #094b65;
+    font-size: 10vw;
+    /* font-size: 155px; */
+    font-family: 'Rancho' , cursive;
+    line-height:.55em;
+    transform: translateY(-50%);
+    text-align: center;
+}
+section #text span{
+    font-size: .20em;
+    letter-spacing: 2px;
+    font-weight: 400;
+}
+#btn{
+    text-decoration: none;
+    /* display: inline-block; */
+    background: #fff;
+    padding:  8px 30px ;
+    color: var(--primary);
+    font-size: 1.2em;
+    font-weight: 500;
+    letter-spacing: 2px;
+    border-radius: 40px;
+    transform: translateY(100px);
+}
+.sec{
+    position: relative;
+    padding: 100px;
+    background-color: #094b65;
     color: #fff;
 }
